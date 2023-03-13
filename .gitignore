@@ -1,5 +1,7 @@
 data/raw/*
 data/transformed/*
 poetry*
+=4.2.0
+notebooks/=4.2.0
 
 
