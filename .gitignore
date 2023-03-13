@@ -1,6 +1,4 @@
-data/*.parquet
-data/*.csv
-
+data/raw/*
 poetry*
 
 
