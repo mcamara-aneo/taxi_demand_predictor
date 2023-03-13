@@ -1,7 +1,6 @@
-data/raw/*
-data/transformed/*
-poetry*
-=4.2.0
-notebooks/=4.2.0
-
-
+.env
+data/
+**/__pycache__
+*.parquet
+*.shp
+*.pkl
