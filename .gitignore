@@ -6,4 +6,5 @@ data/
 *.pkl
 poetry*
 notebooks/catboost_info
+.env
 
