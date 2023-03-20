@@ -56,5 +56,5 @@ def get_pipeline(**hyperparams) -> Pipeline:
     return make_pipeline(
         add_feature_average_rides_last_4_weeks,
         add_temporal_features,
-        ctb.CatBoostRegressor(**hyperparams)
+        lgb.LGBMRegressor(**hyperparams)
     )
