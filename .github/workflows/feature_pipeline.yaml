@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
-        HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
+        
         
     - name: Install Poetry
       uses: snok/install-poetry@v1
@@ -32,6 +32,6 @@ jobs:
       if: steps.cache.outputs.cache-hit != 'true'
         
     - name: execute python workflows from bash script
-      # env: 
-      #   HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
+      env: 
+        HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
       run: poetry run jupyter nbconvert --to notebook --execute notebooks/14_feature_pipeline.ipynb  
