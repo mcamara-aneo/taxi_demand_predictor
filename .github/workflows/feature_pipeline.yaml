@@ -1,9 +1,14 @@
 name: hourly-taxi-demand-feature-pipeline-with-cache
 
 on:
-  push
-
+  push:
+    branches:
+      - main
+      
   workflow_dispatch:
+
+
+  
 
 env:
   PYTHON_VERSION: 3.9
