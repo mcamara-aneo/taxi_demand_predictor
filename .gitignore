@@ -4,6 +4,5 @@ data/
 *.parquet
 *.shp
 *.pkl
-poetry*
 notebooks/catboost_info
 
