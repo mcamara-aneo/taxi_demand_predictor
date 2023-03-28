@@ -4,5 +4,6 @@ data/
 *.parquet
 *.shp
 *.pkl
+*.joblib
 notebooks/catboost_info
 
