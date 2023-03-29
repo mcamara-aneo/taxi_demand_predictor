@@ -4,7 +4,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.pipeline import make_pipeline, Pipeline
 
 import lightgbm as lgb
-import catboost as ctb
+#import catboost as ctb
 
 def average_rides_last_4_weeks(X: pd.DataFrame) -> pd.DataFrame:
     """

@@ -168,5 +168,5 @@ def load_predictions_from_store(
 
     # sort by `pick_up_hour` and `pickup_location_id`
     predictions.sort_values(by=['pickup_hour', 'pickup_location_id'], inplace=True)
-
+    
     return predictions
