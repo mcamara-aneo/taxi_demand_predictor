@@ -1,8 +1,8 @@
 name: hourly-taxi-demand-feature-pipeline-with-cache
 
 on:
-  schedule:
-   - cron: '0 * * * *'
+  # schedule:
+  #  - cron: '0 * * * *'
   push:
     branches:
       - main
