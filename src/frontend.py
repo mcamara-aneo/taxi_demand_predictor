@@ -1,6 +1,5 @@
 import zipfile 
 from datetime import datetime, timedelta
-from pathlib import Path
 
 import requests
 import numpy as np
@@ -9,7 +8,6 @@ import streamlit as st
 import geopandas as gpd
 import pydeck as pdk
 import sys
-
 sys.path.append("/home/mcamara/taxi_demand_predictor")
 
 from src.inference import (
@@ -145,6 +143,7 @@ with st.spinner(text="Preparing data to plot"):
                   how='inner')
     
     BLACK, GREEN = (0, 0, 0), (0, 255, 0)
+    print(f"COLUMNS {list(df.columns)}")
     df['color_scaling'] = df['predicted_demand']
     max_pred, min_pred = df['color_scaling'].max(), df['color_scaling'].min()
     df['fill_color'] = df['color_scaling'].apply(lambda x: pseudocolor(x, min_pred, max_pred, BLACK, GREEN))
