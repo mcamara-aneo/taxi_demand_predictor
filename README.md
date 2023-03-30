@@ -2,6 +2,8 @@
 
 [Deployed Taxi demand predictor](https://mcamara-aneo-taxi-demand-predictor-srcfrontend-1nhytn.streamlit.app/)
 
+[Monitoring APP for taxi demand predictor](https://mcamara-aneo-taxi-demand-predicto-srcfrontend-monitoring-45hbo2.streamlit.app/)
+
 
 
 
