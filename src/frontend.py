@@ -12,8 +12,10 @@ sys.path.append("/home/mcamara/taxi_demand_predictor")
 
 from src.inference import (
     load_predictions_from_store,
-    load_batch_of_features_from_store
+    load_batch_of_features_from_store,
+ 
 )
+from src.monitoring import load_predictions_and_actual_values_from_store
 from src.paths import DATA_DIR
 from src.plot import plot_one_sample
 
@@ -90,7 +92,7 @@ def _load_predictions_from_store(
     Returns:
         pd.DataFrame: 2 columns: pickup_location_id, predicted_demand
     """
-    return load_predictions_from_store(from_pickup_hour, to_pickup_hour)
+    return load_predictions_and_actual_values_from_store(from_pickup_hour, to_pickup_hour)
 
 with st.spinner(text="Downloading shape file to plot taxi zones"):
     geo_df = load_shape_data_file()
