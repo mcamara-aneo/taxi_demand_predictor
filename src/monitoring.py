@@ -3,7 +3,6 @@ from datetime import datetime, timedelta
 import pandas as pd
 import sys
 
-
 sys.path.append("/home/mcamara/taxi_demand_predictor")
 
 import src.config as config
