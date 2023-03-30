@@ -150,8 +150,8 @@ def load_predictions_from_store(
             query=predictiong_fg.select_all()
         )
     except:
-        print(f'Feature view {config.FEATURE_VIEW_MODEL_PREDICTIONS} \
-              already existed. Skipped creation.')
+         print(f'Feature view {config.FEATURE_VIEW_MODEL_PREDICTIONS}\
+               already existed. Skipped creation.')
    
     predictions_fv = feature_store.get_feature_view(
         name=config.FEATURE_VIEW_MODEL_PREDICTIONS,
@@ -167,6 +167,9 @@ def load_predictions_from_store(
         from_pickup_hour, to_pickup_hour)]
 
     # sort by `pick_up_hour` and `pickup_location_id`
-    predictions.sort_values(by=['pickup_hour', 'pickup_location_id'], inplace=True)
+    predictions.sort_values(by=['pickup_hour', 'pickup_location_id'],
+                             inplace=True)
+    predictions.rename(columns={"rides": "predicted_demand"},
+                        inplace=True)
     
     return predictions

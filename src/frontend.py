@@ -92,7 +92,8 @@ def _load_predictions_from_store(
     Returns:
         pd.DataFrame: 2 columns: pickup_location_id, predicted_demand
     """
-    return load_predictions_and_actual_values_from_store(from_pickup_hour, to_pickup_hour)
+    
+    return load_predictions_from_store(from_pickup_hour, to_pickup_hour)
 
 with st.spinner(text="Downloading shape file to plot taxi zones"):
     geo_df = load_shape_data_file()
