@@ -1,11 +1,11 @@
 name: hourly-taxi-demand-feature-pipeline-with-cache
 
 on:
-  schedule:
-    - cron: '0 * * * *'
-  # push:
-  #  branches:
-  #    - main
+  # schedule:
+  #   - cron: '0 * * * *'
+  push:
+   branches:
+     - main
 
   workflow_dispatch:
 
@@ -53,4 +53,5 @@ jobs:
     - name: execute python workflows from bash script
       env: 
         HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
-      run: poetry run jupyter nbconvert --to notebook --execute notebooks/14_feature_pipeline.ipynb 
+      #run: poetry run jupyter nbconvert --to notebook --execute notebooks/14_feature_pipeline.ipynb
+      run: make features 
