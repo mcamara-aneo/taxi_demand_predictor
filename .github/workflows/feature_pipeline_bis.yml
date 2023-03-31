@@ -1,4 +1,4 @@
-name: hourly-taxi-demand-feature-pipeline-with-cache
+name: hourly-taxi-demand-feature-pipeline-with-cache-bis
 
 on:
   # schedule:
