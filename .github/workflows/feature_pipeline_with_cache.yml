@@ -1,18 +1,18 @@
 name: hourly-taxi-demand-feature-pipeline-with-cache
 
 on:
-  schedule:
-    - cron: '0 * * * *'
-  #push:
-  #  branches:
-  #    - main
+  # schedule:
+  #   - cron: '0 * * * *'
+  push:
+   branches:
+     - main
 
   workflow_dispatch:
 
 env:
   PYTHON_VERSION: 3.9
-  POETRY_VERSION: 0.1.0
-  POETRY_URL: https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py
+  POETRY_VERSION: 1.4.1
+  POETRY_URL: https://install.python-poetry.org
 
 jobs:
 
